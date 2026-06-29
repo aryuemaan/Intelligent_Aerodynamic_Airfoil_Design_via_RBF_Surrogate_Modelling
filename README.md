@@ -1,4 +1,5 @@
 # Intelligent Aerodynamic Airfoil Design — RBF Surrogate Framework
+<img width="2752" height="1304" alt="image" src="https://github.com/user-attachments/assets/381f9446-5a99-498b-b158-e598ab354a43" />
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
