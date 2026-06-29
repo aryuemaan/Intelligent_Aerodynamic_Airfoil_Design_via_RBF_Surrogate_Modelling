@@ -125,7 +125,7 @@ A complete demonstration pipeline using synthetic airfoils allows users to evalu
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/airfoil-rbf-surrogate.git
+git clone https://github.com/aryuemaan/airfoil-rbf-surrogate.git
 cd airfoil-rbf-surrogate
 ```
 
