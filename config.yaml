@@ -1,0 +1,46 @@
+# ============================================================
+#  Configuration for the RBF airfoil-design pipeline.
+#  Paths are relative to this file's directory (project root).
+# ============================================================
+
+paths:
+  raw_data: E:/Airfoil    # put the downloaded .h5 files here
+  work:     data/work              # intermediate .npy artefacts
+  models:   models                 # saved surrogate + scalers + metrics
+  figures:  figures                # output plots
+
+cst:
+  n_order: 10           # Bernstein order -> 11 coeffs/surface, 22 total
+                        # (use 8 to match the G2Aero baseline, 20 for higher fidelity)
+  n_surface_pts: 101
+  n1: 0.5               # round leading edge
+  n2: 1.0               # sharp trailing edge
+  rmse_thresh: 1.0e-3   # reject CST fits worse than this
+
+flow:
+  mach_inf: 0.1
+  reynolds: 9.0e6
+  gamma: 1.4
+  a_inf: 340.15
+  rho_inf: 1.225
+  aoas: [4.0, 12.0]
+  cp_method: incompressible   # 'incompressible' (robust at M=0.1) or 'compressible'
+
+filter:
+  cd_sigma: 3.0
+  cl_sigma: 4.0
+  require_positive_cl: false
+  style_abs_max: 10.0
+
+rbf:
+  kernel: multiquadric
+  epsilons: [0.05, 0.1, 0.3, 0.5, 1.0, 2.0, 5.0]
+  smoothing: 0.0
+  direction: forward      # 'inverse' (Clark's design map) or 'forward' (for optimisation)
+  max_centres: 6000       # cap for tractable solve; null = use all points
+  random_state: 42
+  test_size: 0.15
+  val_size: 0.15
+
+checkpoint_every: 500
+n_jobs: -1

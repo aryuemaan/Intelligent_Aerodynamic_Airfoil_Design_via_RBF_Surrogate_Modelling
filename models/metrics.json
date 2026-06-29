@@ -1,0 +1,15 @@
+{
+  "direction": "forward",
+  "best_epsilon": 5.0,
+  "n_train": 12446,
+  "n_val": 2667,
+  "n_test": 2667,
+  "n_centres": 6000,
+  "fit_time_s": 0.6262485980987549,
+  "test_rmse_mean": 0.003126874598149204,
+  "test_rmse_per_output": [
+    0.0013953428247187036,
+    0.00676924579086662,
+    0.00121603517886229
+  ]
+}
